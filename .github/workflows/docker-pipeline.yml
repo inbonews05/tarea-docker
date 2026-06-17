@@ -10,10 +10,10 @@ jobs:
 
     steps:
       - name: 1. Obtener el codigo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 2. Configurar Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'
 
@@ -29,13 +29,13 @@ jobs:
         run: python app.py
 
       - name: 6. Autenticacion en Docker Hub
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_GAEL }}
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: 7. Construir e insertar imagen en Docker Hub
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v5
         with:
           context: .
           push: true
