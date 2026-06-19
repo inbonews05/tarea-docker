@@ -24,7 +24,7 @@ jobs:
           tags: test-build:latest
 
       - name: 4. Ejecutar comprobacion con docker/bake
-        uses: docker/bake-action@v4
+        uses: docker/bake-action@v5
         with:
           push: false   # "false" indica que es solo comprobacion
           load: false
