@@ -3,3 +3,4 @@ target "default" {
   context = "."
   tags = ["comprobacion-local:latest"]
 }
+

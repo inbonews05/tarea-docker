@@ -6,3 +6,5 @@ if __name__ == "__main__":
     print("====================================")
     print(f"Ejecución del código: 5 + 7 = {resultado}")
     print("====================================")
+
+    # hola profesor
